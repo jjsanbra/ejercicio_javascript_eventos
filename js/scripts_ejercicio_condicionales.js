@@ -17,6 +17,7 @@ Operadores Lógicos
 var boton1 = document.getElementById("boton1");
 var boton2 = document.getElementById("boton2");
 var boton3 = document.getElementById("boton3");
+var boton4 = document.getElementById("boton4");
 
 //Condicional If / Else
 boton1.addEventListener("click", function(){
@@ -34,8 +35,6 @@ boton1.addEventListener("click", function(){
 		document.write("Usted es menor de edad y no puede acceder");
 	}
 });
-
-
 
 
 // Crear un desvio de URL
@@ -57,9 +56,30 @@ boton2.addEventListener("click", function(){
 });
 
 
+//El mismo ejercicio que el anterior pero cargado el texto en un h3 y creando los enlaces
+// Crear un desvio de URL
+boton3.addEventListener("click", function(){
+	var buscador = prompt("Diga su buscador favorito");
+	var urlGoogle = "http://www.google.com";
+	var urlYahoo = "http://www.yahoo.com";
+	var urlBing = "http://www.bing.com";
+	var mensaje = document.getElementById("mensaje");
+	
+	if(buscador=="google" || buscador=="Google" || buscador=="GOOGLE"){
+		mensaje.innerHTML = "Diríjase a <a href='" + urlGoogle + "'>" + urlGoogle + "</a>";
+	} else if (buscador=="yahoo" || buscador=="Yahoo" || buscador=="YAHOO"){
+		mensaje.innerHTML = "Diríjase a <a href='" + urlYahoo + "'>" + urlYahoo + "</a>";
+	} else if (buscador=="bing" || buscador=="Bing" || buscador=="BING"){
+		mensaje.innerHTML = "Diríjase a <a href='" + urlBing + "'>" + urlBing + "</a>";
+	} else {
+		mensaje.innerHTML = "Escoge entre: <br /><a href='" + urlGoogle + "'>" + urlGoogle + "</a><br /><a href='" + urlYahoo + "'>" + urlYahoo + "</a><br /><a href='" + urlBing + "'>" + urlBing + "</a>";
+	}
+});
+
+
 // Condicionales con Switch
 
-boton2.addEventListener("click", function(){
+boton4.addEventListener("click", function(){
 	var edad = parseInt(prompt("Introduzca su edad"));
 	var valida = edad>=18;
 
