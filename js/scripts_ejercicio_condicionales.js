@@ -20,6 +20,7 @@ var boton3 = document.getElementById("boton3");
 var boton4 = document.getElementById("boton4");
 
 //Condicional If / Else
+
 boton1.addEventListener("click", function(){
 	var a = prompt("Ingrese su edad");
 	var b = 18;
