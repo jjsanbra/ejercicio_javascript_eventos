@@ -56,7 +56,7 @@ $(document).on('ready', function() {
 		} else if (buscador=="bing" || buscador=="Bing" || buscador=="BING"){
 			mensaje.text("Diríjase a " + urlBing);
 		} else {
-			mensaje.text("Escoge entre: <br />" + urlGoogle + "<br />" + urlYahoo + "<br />" + urlBing);
+			mensaje.html("Escoge entre: <br />" + urlGoogle + "<br />" + urlYahoo + "<br />" + urlBing);
 		}
 	});
 
@@ -94,5 +94,4 @@ $(document).on('ready', function() {
 				mensaje.text("Es menor de edad");
 		}
 	});
-
 });
